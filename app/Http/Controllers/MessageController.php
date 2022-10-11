@@ -11,16 +11,24 @@ class MessageController extends Controller
     {
         switch ($gree) {
             case 'morning':
-                return view('message.morning', ['gree' => $gree]);
+            $title = "朝のあいさつ";
+            $greet = "おはよう";
+                return view('message.greet', ['gree' => $gree, 'title' => $title, 'greet' => $greet]);
                 break;
             case 'afternoon':
-                return view('message.afternoon', ['gree' => $gree]);
+            $title = "昼のあいさつ";
+            $greet = "こんにちは";
+                return view('message.greet', ['gree' => $gree, 'title' => $title, 'greet' => $greet]);
                 break;
             case 'evening':
-                return view('message.evening', ['gree' => $gree]);
+            $title = "夕方のあいさつ";
+            $greet = "こんばんは";
+                return view('message.greet', ['gree' => $gree, 'title' => $title, 'greet' => $greet]);
                 break;
             case 'night':
-                return view('message.night', ['gree' => $gree]);
+            $title = "夜のあいさつ";
+            $greet = "おやすみ";
+                return view('message.greet', ['gree' => $gree, 'title' => $title, 'greet' => $greet]);
                 break;
         }
     }
